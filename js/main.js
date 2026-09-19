@@ -1,4 +1,30 @@
 (function () {
+  function setImg(el, b64) {
+    var url = "data:image/jpeg;base64," + b64;
+    if (el.tagName === "IMG") {
+      el.src = url;
+    } else if (el.classList.contains("page-hero")) {
+      var overlay = el.classList.contains("page-hero--home")
+        ? "linear-gradient(160deg,rgba(44,24,16,0.55),rgba(92,46,10,0.75))"
+        : "linear-gradient(135deg,rgba(139,69,19,0.92),rgba(92,46,10,0.85))";
+      el.style.backgroundImage = overlay + ", url('" + url + "')";
+    } else {
+      el.style.backgroundImage = "url('" + url + "')";
+    }
+  }
+
+  function loadImages() {
+    document.querySelectorAll("[data-img]").forEach(function (el) {
+      var name = el.getAttribute("data-img");
+      if (!name) return;
+      if (window.CHX_IMG && window.CHX_IMG[name]) {
+        setImg(el, window.CHX_IMG[name]);
+        return;
+      }
+      console.warn("missing image", name);
+    });
+  }
+
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".site-nav");
   if (toggle && nav) {
@@ -8,40 +34,30 @@
     });
   }
 
-  // Lightbox for gallery
   var lb = document.getElementById("lightbox");
   var lbImg = lb && lb.querySelector("img");
   var lbClose = lb && lb.querySelector(".lightbox-close");
-
   function closeLb() {
     if (!lb) return;
     lb.classList.remove("open");
     lb.setAttribute("aria-hidden", "true");
-    if (lbImg) lbImg.src = "";
+    if (lbImg) lbImg.removeAttribute("src");
   }
-
   document.querySelectorAll("[data-lightbox]").forEach(function (link) {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       if (!lb || !lbImg) return;
-      lbImg.src = link.getAttribute("href");
-      lbImg.alt = link.querySelector("img") ? link.querySelector("img").alt : "";
+      var img = link.querySelector("img");
+      lbImg.src = img && img.src ? img.src : "";
+      lbImg.alt = img ? img.alt : "";
       lb.classList.add("open");
       lb.setAttribute("aria-hidden", "false");
     });
   });
-
   if (lbClose) lbClose.addEventListener("click", closeLb);
-  if (lb) {
-    lb.addEventListener("click", function (e) {
-      if (e.target === lb) closeLb();
-    });
-  }
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeLb();
-  });
+  if (lb) lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
 
-  // Inquire form → mailto
   var form = document.getElementById("inquire-form");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -51,12 +67,10 @@
       var interest = (form.interest.value || "").trim();
       var visit = (form.visit.value || "").trim();
       var message = (form.message.value || "").trim();
-
       if (!name || !email || !message) {
         alert("Please fill in your name, email, and message.");
         return;
       }
-
       var subject = "Inquiry from " + name + " — Chappell Hill Xolos";
       var body = [
         "Name: " + name,
@@ -69,13 +83,12 @@
         "",
         "— Sent from chappellhillxolos website inquire form"
       ].join("\n");
-
-      var mailto =
-        "mailto:chappellhillxolos@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
+      window.location.href =
+        "mailto:chappellhillxolos@gmail.com?subject=" +
+        encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
-
-      window.location.href = mailto;
     });
   }
+
+  loadImages();
 })();
