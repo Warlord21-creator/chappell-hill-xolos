@@ -50,4 +50,4 @@ Custom domain (optional): add it under Pages → Custom domain and point DNS as 
 - Instagram: https://www.instagram.com/chappellhillxolos
 - Facebook: https://www.facebook.com/chappellhillxolos
 
-Visits Thursday–Sunday by appointment. No shipping. No same-day placement.
+Visits by request. No shipping. No same-day placement.
