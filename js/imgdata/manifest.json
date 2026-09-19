@@ -1,163 +1,163 @@
 {
-  "logo-seal.jpg": {
-    "parts": 4,
-    "w": 420,
-    "h": 420,
-    "q": 39,
-    "jpeg": 14556
-  },
   "downtown-chappell-hill-historic.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 480,
     "h": 360,
-    "q": 41,
+    "q": 40,
     "jpeg": 14446
   },
+  "logo-seal.jpg": {
+    "parts": 20,
+    "w": 420,
+    "h": 420,
+    "q": 40,
+    "jpeg": 14556
+  },
   "photo-01.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 315,
     "h": 420,
-    "q": 43,
+    "q": 40,
     "jpeg": 14625
   },
   "photo-02.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 303,
     "h": 540,
-    "q": 45,
+    "q": 40,
     "jpeg": 14600
   },
   "photo-03.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 360,
     "h": 360,
-    "q": 43,
+    "q": 40,
     "jpeg": 14603
   },
   "photo-04.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 340,
     "h": 255,
-    "q": 53,
+    "q": 40,
     "jpeg": 14522
   },
   "photo-05.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 560,
     "h": 420,
     "q": 40,
     "jpeg": 14618
   },
   "photo-06.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 315,
     "h": 560,
     "q": 40,
     "jpeg": 14586
   },
   "photo-07.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 195,
     "h": 260,
-    "q": 72,
+    "q": 40,
     "jpeg": 14598
   },
   "photo-08.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 300,
     "h": 225,
-    "q": 50,
+    "q": 40,
     "jpeg": 14624
   },
   "photo-09.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 300,
     "h": 225,
-    "q": 65,
+    "q": 40,
     "jpeg": 14612
   },
   "photo-10.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 330,
     "h": 440,
-    "q": 43,
+    "q": 40,
     "jpeg": 14491
   },
   "photo-11.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 270,
     "h": 360,
-    "q": 54,
+    "q": 40,
     "jpeg": 14582
   },
   "photo-12.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 390,
     "h": 520,
     "q": 40,
     "jpeg": 14496
   },
   "photo-13.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 255,
     "h": 340,
-    "q": 56,
+    "q": 40,
     "jpeg": 14615
   },
   "photo-14.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 560,
     "h": 560,
     "q": 40,
     "jpeg": 14417
   },
   "photo-15.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 460,
     "h": 460,
-    "q": 41,
+    "q": 40,
     "jpeg": 14430
   },
   "photo-16.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 375,
     "h": 500,
     "q": 40,
     "jpeg": 14308
   },
   "photo-17.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 308,
     "h": 640,
-    "q": 41,
+    "q": 40,
     "jpeg": 14521
   },
   "photo-18.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 360,
     "h": 360,
-    "q": 50,
+    "q": 40,
     "jpeg": 14614
   },
   "photo-19.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 225,
     "h": 300,
-    "q": 73,
+    "q": 40,
     "jpeg": 14504
   },
   "photo-20.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 280,
     "h": 280,
-    "q": 42,
+    "q": 40,
     "jpeg": 14510
   },
   "photo-21.jpg": {
-    "parts": 4,
+    "parts": 20,
     "w": 260,
     "h": 195,
-    "q": 60,
+    "q": 40,
     "jpeg": 14624
   }
 }
