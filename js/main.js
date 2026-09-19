@@ -14,6 +14,18 @@
   }
 
   function loadImages() {
+    if (typeof window.CHX_loadImages === "function") {
+      window.CHX_loadImages().then(function () {
+        // lightbox uses img.src after load; ensure any late nodes covered
+        document.querySelectorAll("[data-img]").forEach(function (el) {
+          var name = el.getAttribute("data-img");
+          if (name && window.CHX_IMG && window.CHX_IMG[name] && el.tagName === "IMG" && !el.getAttribute("src")) {
+            el.src = "data:image/jpeg;base64," + window.CHX_IMG[name];
+          }
+        });
+      });
+      return;
+    }
     document.querySelectorAll("[data-img]").forEach(function (el) {
       var name = el.getAttribute("data-img");
       if (!name) return;
